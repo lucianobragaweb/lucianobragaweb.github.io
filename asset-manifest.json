@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/lucianobragaweb/lucianobragaweb.github.io/static/css/main.d07d8156.css",
-    "main.js": "/lucianobragaweb/lucianobragaweb.github.io/static/js/main.7e5ffb15.js",
+    "main.css": "/lucianobragaweb.github.io/static/css/main.d07d8156.css",
+    "main.js": "/lucianobragaweb.github.io/static/js/main.7e5ffb15.js",
     "static/js/787.dd4029b4.chunk.js": "/lucianobragaweb/lucianobragaweb.github.io/static/js/787.dd4029b4.chunk.js",
-    "index.html": "/lucianobragaweb/lucianobragaweb.github.io/index.html",
-    "main.d07d8156.css.map": "/lucianobragaweb/lucianobragaweb.github.io/static/css/main.d07d8156.css.map",
-    "main.7e5ffb15.js.map": "/lucianobragaweb/lucianobragaweb.github.io/static/js/main.7e5ffb15.js.map",
-    "787.dd4029b4.chunk.js.map": "/lucianobragaweb/lucianobragaweb.github.io/static/js/787.dd4029b4.chunk.js.map"
+    "index.html": "/lucianobragaweb.github.io/index.html",
+    "main.d07d8156.css.map": "/lucianobragaweb.github.io/static/css/main.d07d8156.css.map",
+    "main.7e5ffb15.js.map": "/lucianobragaweb.github.io/static/js/main.7e5ffb15.js.map",
+    "787.dd4029b4.chunk.js.map": "/lucianobragaweb.github.io/static/js/787.dd4029b4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d07d8156.css",

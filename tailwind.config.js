@@ -13,7 +13,8 @@ module.exports = {
         'gray-100': '#607B96',
         'gray-200': '#1E2D3D',
         'gray-600': '#011627',
-        'gray-800': '#010C15'
+        'gray-800': '#010C15',
+        'green-link': '#43D9AD'
       }
     },
   },

@@ -16,7 +16,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 export default function App() {
   return (
     <Router>
-      <div className="text-gray-100 h-full p-10">
+      <div className="text-gray-100 h-full p-4 md:p-10">
         <div className="h-full flex flex-col rounded-lg bg-gray-600 border border-gray-200">
           <Header/>
           <div className="min-h-0 flex-1 flex overflow-hidden">

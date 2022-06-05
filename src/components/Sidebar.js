@@ -9,10 +9,10 @@ export default () => {
                     <Icon icon='terminal' />
                 </Link>
 
-                <Link to="/about" className="text-gray-400 hover:text-gray-50 flex-shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-lg">
+                {/* <Link to="/about" className="text-gray-400 hover:text-gray-50 flex-shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-lg">
                     <span className="sr-only">About</span>
                     <Icon icon='profile' />
-                </Link>
+                </Link> */}
             </div>
         </nav>
     )

@@ -20,12 +20,12 @@ export default function App() {
       <div className="text-gray-100 h-full p-4 md:p-10">
         <div className="h-full flex flex-col rounded-lg bg-gray-600 border border-gray-200 relative">
 
-          <div className='h-full w-full absolute opacity-50' style={ { backgroundImage: 'url(' + background + ')', backgroundRepeat: 'no-repeat' }}></div>
+          <div className='h-full w-full absolute opacity-50 bg-glow' style={ { backgroundImage: 'url(' + background + ')' }}></div>
           <Header/>
           <div className="min-h-0 flex-1 flex overflow-hidden">
             <Sidebar/>
 
-            <main className="min-w-0 flex-1 lg:flex z-1">
+            <main className="min-w-0 flex-1 lg:flex z-10">
               <Routes>
                 <Route exact path="/" element={ <Home /> } />
                 <Route exact path="/about" element={ <About /> } />

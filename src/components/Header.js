@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'react-router-dom'
 export default () => {
     return (
-        <header className="flex-shrink-0 relative h-12 flex items-center border-b border-gray-200 bg-gray-600/40 backdrop-blur-lg">
+        <header className="flex-shrink-0 relative h-12 flex items-center border-b border-gray-200 bg-gray-600/40 backdrop-blur-lg z-10">
             <div className="left-0 px-4 border-r border-gray-200 max-w-80">
                 <Link to="/" className="flex items-center justify-center h-12 focus:outline-none hover:text-gray-50">luciano-braga</Link>
             </div>

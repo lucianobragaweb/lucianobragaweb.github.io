@@ -18,9 +18,9 @@ export default function App() {
   return (
     <Router>
       <div className="text-gray-100 h-full p-4 md:p-10">
-        <div className="h-full flex flex-col rounded-lg bg-gray-600 border border-gray-200 relative">
+        <div className="h-full flex flex-col rounded bg-gray-600 border border-gray-200 relative">
 
-          <div className='h-full w-full absolute opacity-50 bg-glow' style={ { backgroundImage: 'url(' + background + ')' }}></div>
+          <div className='h-full w-full absolute opacity-50 bg-glow rounded-t' style={ { backgroundImage: 'url(' + background + ')' }}></div>
           <Header/>
           <div className="min-h-0 flex-1 flex overflow-hidden">
             <Sidebar/>

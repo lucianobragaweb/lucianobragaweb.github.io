@@ -25,7 +25,7 @@ export default function App() {
           <div className="min-h-0 flex-1 flex overflow-hidden">
             <Sidebar/>
 
-            <main className="min-w-0 flex-1 lg:flex">
+            <main className="min-w-0 flex-1 lg:flex z-1">
               <Routes>
                 <Route exact path="/" element={ <Home /> } />
                 <Route exact path="/about" element={ <About /> } />

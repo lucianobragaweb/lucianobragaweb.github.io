@@ -1,7 +1,7 @@
 import Icon from '../assets/Icon.js'
 export default () => {
     return (
-        <footer className="h-12 flex items-center border-t border-gray-200">
+        <footer className="h-12 flex items-center border-t border-gray-200 z-1">
             <div className="left-0 px-4 border-r border-gray-200">
                 <a href='#test' className="flex items-center justify-center h-12 focus:outline-none rounded-bl">
                     find me in:

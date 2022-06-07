@@ -2,7 +2,7 @@ import logo from '../assets/logo.svg'
 export default () => {
     return (
         <>
-            <section className="flex-1 pt-16 pb-20 text-center lg:py-48 lg:text-left">
+            <section className="flex-1 lg:pt-10 lg:pb-10 text-center py-10 lg:py-48 lg:text-left">
                 <div className="px-4 sm:px-8 xl:pr-16">
                     <h1 className="text-4xl tracking-tight font-light text-gray-900 sm:text-5xl md:text-4xl lg:text-4xl xl:text-4xl">
                         <p className="mt-3 max-w-md mx-auto text-lg text-white sm:text-xl md:mt-5 md:max-w-3xl">Hi all. I am</p>
@@ -13,7 +13,7 @@ export default () => {
                 </div>
             </section>
 
-            <section className="flex-1 pt-16 pb-20 text-center lg:py-48 lg:text-left relative">
+            <section className="flex-1 text-center py-10 lg:py-48 lg:text-left relative">
                 <div className='h-96 w-64 absolute lg:right-72 -top-10 lg:top-32 rounded-full bg-gradient-to-b from-green-link blur-3xl -rotate-45'></div>
                 <div className='h-96 w-96 absolute right-0 lg:right-0 top-32 lg:top-64 rounded-full bg-gradient-to-r from-purple-700 blur-3xl'></div>
                 <div className='h-full w-96 mx-auto rounded-lg lg:shadow-lg lg:backdrop-blur-sm lg:bg-white/10 p-4 flex items-center'>

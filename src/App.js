@@ -25,7 +25,7 @@ export default function App() {
           <div className="min-h-0 flex-1 flex overflow-hidden">
             <Sidebar/>
 
-            <main className="min-w-0 flex-1 lg:flex z-10">
+            <main className="min-w-0 flex-1 lg:flex z-10 overflow-hidden" style={ { overflowY: 'auto' } }>
               <Routes>
                 <Route exact path="/" element={ <Home /> } />
                 <Route exact path="/about" element={ <About /> } />

@@ -1,5 +1,6 @@
 import './App.css';
 import React from "react";
+import background from './assets/bg.png'
 
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
@@ -17,18 +18,20 @@ export default function App() {
   return (
     <Router>
       <div className="text-gray-100 h-full p-4 md:p-10">
-        <div className="h-full flex flex-col rounded-lg bg-gray-600 border border-gray-200">
+        <div className="h-full flex flex-col rounded-lg bg-gray-600 border border-gray-200 relative">
+
+          <div className='h-full w-full absolute opacity-50' style={ { backgroundImage: 'url(' + background + ')', backgroundRepeat: 'no-repeat' }}></div>
           <Header/>
           <div className="min-h-0 flex-1 flex overflow-hidden">
             <Sidebar/>
 
             <main className="min-w-0 flex-1 lg:flex">
-                <Routes>
-                  <Route exact path="/" element={ <Home /> } />
-                  <Route exact path="/about" element={ <About /> } />
-                  <Route exact path="/contact" element={ <Contact /> } />
-                  <Route exact path="/projects" element={ <Projects /> } />
-                </Routes>
+              <Routes>
+                <Route exact path="/" element={ <Home /> } />
+                <Route exact path="/about" element={ <About /> } />
+                <Route exact path="/contact" element={ <Contact /> } />
+                <Route exact path="/projects" element={ <Projects /> } />
+              </Routes>
             </main>
           </div>
 
@@ -37,4 +40,8 @@ export default function App() {
       </div>
     </Router >
   );
+
+  // const styles = {
+
+  // }
 }

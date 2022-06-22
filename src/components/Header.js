@@ -25,6 +25,9 @@ export default () => {
                     <nav aria-label="Global" className="flex">
                         <ul className='flex justify-center'>
                             <li className='border-gray-200 border-b-4 hover:border-orange-700 h-12 py-2.5 text-gray-100 hover:text-gray-50'>
+                                <a href="https://medium.com/lucianobragaweb" className="text-sm font-medium border-l border-gray-200 h-12 px-4 py-3.5" target="_blank">_blog</a>
+                            </li>
+                            <li className='border-gray-200 border-b-4 hover:border-orange-700 h-12 py-2.5 text-gray-100 hover:text-gray-50'>
                                 <a href="https://lucianobragaweb.github.io/resume" className="text-sm font-medium border-l border-gray-200 h-12 px-4 py-3.5" target="_blank">_resume</a>
                             </li>
                         </ul>

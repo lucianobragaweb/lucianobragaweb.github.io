@@ -2,7 +2,7 @@ import logo from '../assets/logo.svg'
 export default () => {
     return (
         <>
-            <section className="flex-1 lg:pt-10 lg:pb-10 text-center py-10 lg:py-48 lg:text-left">
+            <section className="flex-1 text-center py-10 lg:py-48 lg:text-left">
                 <div className="px-4 sm:px-8 xl:pr-16">
                     <h1 className="text-4xl tracking-tight font-light text-gray-900 sm:text-5xl md:text-4xl lg:text-4xl xl:text-4xl">
                         <p className="mt-3 max-w-md mx-auto text-lg text-white sm:text-xl md:mt-5 md:max-w-3xl">Hi all. I am</p>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Mail, Phone, Youtube, ChevronRight, ChevronDown, ExternalLink } from "lucide-react";
 import ResizableColumn from "@/components/ResizableColumn";
+import { Highlight } from "prism-react-renderer";
 
 const contacts = [
   { label: "user@gmail.com", icon: <Mail size={16} className="inline mr-1 text-[#b3b9c5]" /> },
@@ -55,20 +56,25 @@ export default function ContactPage() {
 
   const editorContent = (
     <section className="flex h-full flex-col justify-center items-center px-8 py-12 border-l border-[#23263a] bg-[#181b2b]">
-      <pre className="w-full max-w-lg h-full min-h-[320px] bg-transparent text-[#b3b9c5] text-[15px] font-mono p-6 rounded-lg overflow-x-auto select-text">
-{`const button = document.querySelector('#sendBtn');
-
-const message = {
-  name: "${form.name}",
-  email: "${form.email}",
-  message: "${form.message}",
-  date: "${new Date().toDateString()}"
-}
-
-button.addEventListener('click', () => {
-  form.send(message);
-})`}
-      </pre>
+      <div className="w-full max-w-lg h-full min-h-[320px] bg-transparent text-[#b3b9c5] text-[15px] font-mono p-6 rounded-lg overflow-x-auto select-text">
+        <Highlight code={`const button = document.querySelector('#sendBtn');\n\nconst message = {\n  name: \"${form.name}\",\n  email: \"${form.email}\",\n  message: \"${form.message}\",\n  date: \"${new Date().toDateString()}\"\n}\n\nbutton.addEventListener('click', () => {\n  form.send(message);\n})`} language="js">
+          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            <pre className={className} style={{ ...style, background: "transparent" }}>
+              {tokens.map((line, i) => {
+                const { key: lineKey, ...lineProps } = getLineProps({ line, key: i });
+                return (
+                  <div key={String(lineKey)} {...lineProps}>
+                    {line.map((token, key) => {
+                      const { key: tokenKey, ...rest } = getTokenProps({ token, key });
+                      return <span key={String(tokenKey)} {...rest} />;
+                    })}
+                  </div>
+                );
+              })}
+            </pre>
+          )}
+        </Highlight>
+      </div>
     </section>
   );
 

@@ -4,7 +4,7 @@ import { Star, MessageCircle } from "lucide-react";
 
 const snippets = [
   {
-    user: "@username",
+    user: "@lucianobragaweb",
     created: "5 months ago",
     details: "details",
     stars: 3,
@@ -12,7 +12,7 @@ const snippets = [
     language: "tsx",
   },
   {
-    user: "@username",
+    user: "@lucianobragaweb",
     created: "9 months ago",
     details: "details",
     stars: 0,

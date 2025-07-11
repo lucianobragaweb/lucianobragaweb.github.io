@@ -23,7 +23,7 @@ redirect('home');
 
 export default function NotFound() {
   return (
-    <div className="w-full h-full flex items-center justify-center bg-black font-mono text-[#b3b9c5]">
+    <div className="w-full h-full flex items-center justify-center bg-[#20222e] font-mono text-[#b3b9c5]">
       <div className="flex flex-row w-full max-w-7xl items-center justify-center gap-8 px-4">
         {/* 404 grande à esquerda */}
         <div className="text-[8rem] flex-1 leading-none font-bold text-[#a3adc2] select-none relative" style={{textShadow: '2px 2px 0 #23263a, 4px 4px 0 #23263a, 6px 6px 0 #23263a'}}>

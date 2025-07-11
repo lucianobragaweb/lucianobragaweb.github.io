@@ -13,7 +13,17 @@ const gradient = "radial-gradient(circle at 60% 40%, #4fc3f7 0%, #7c3aed 40%, #2
 
 export default function CodeGlow() {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 relative overflow-visible">
+      {/* Gradiente azul multicolorido com mais contraste no topo/esquerda */}
+      <div
+        className="absolute -top-32 -left-32 w-[500px] h-[400px] rounded-full blur-3xl opacity-90 pointer-events-none"
+        style={{
+          background: "linear-gradient(135deg, #00ffb2 0%, #0099ff 35%, #00fff0 65%, #a259f7 100%)"
+        }}
+      ></div>
+      {/* Outros gradientes de fundo */}
+      <div className="absolute bottom-0 right-0 w-[600px] h-[400px] rounded-full bg-gradient-to-tr from-[#7c3aed] via-[#a259f7] to-transparent blur-3xl opacity-60 pointer-events-none"></div>
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-br from-[#22d3ee] via-[#4fc3f7] to-[#7c3aed] blur-3xl opacity-40 pointer-events-none"></div>
       {[0, 1, 2].map((i) => (
         <div
           key={i}
@@ -31,13 +41,19 @@ export default function CodeGlow() {
           <Highlight code={code} language="tsx" theme={themes.nightOwl}>
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
               <pre className={"font-mono text-xs bg-transparent px-5 py-4 rounded-xl " + className} style={style}>
-                {tokens.map((line, i) => (
-                  <div key={i} {...getLineProps({ line, key: i })}>
-                    {line.map((token, key) => (
-                      <span key={key} {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                ))}
+                {tokens.map((line, i) => {
+                  const lineProps = getLineProps({ line, key: i });
+                  const { key: lineKey, ...linePropsWithoutKey } = lineProps;
+                  return (
+                    <div key={i} {...linePropsWithoutKey}>
+                      {line.map((token, key) => {
+                        const tokenProps = getTokenProps({ token, key });
+                        const { key: tokenKey, ...tokenPropsWithoutKey } = tokenProps;
+                        return <span key={key} {...tokenPropsWithoutKey} />;
+                      })}
+                    </div>
+                  );
+                })}
               </pre>
             )}
           </Highlight>

@@ -28,19 +28,19 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="min-h-screen w-full bg-[#181B23] flex flex-col items-center justify-between py-6 px-4">
+        <div className="h-screen w-full bg-[#181B23] flex flex-col items-center justify-between py-6 px-4">
           {/* Navbar */}
-          <div className="w-full max-w-6xl rounded-t-[14px] border-x border-t border-[#23263a] bg-[#23263a]/60 shadow-lg flex flex-col relative overflow-hidden">
+          <div className="w-full rounded-t-[14px] border-x border-t border-[#23263a] bg-[#23263a]/60 shadow-lg flex flex-col overflow-hidden">
             <div className="border-b border-[#23263a] px-4 sm:px-8 pt-4 pb-2">
               <Navbar />
             </div>
           </div>
           {/* Conteúdo principal */}
-          <main className="w-full max-w-6xl flex-1 flex flex-row relative px-4 sm:px-8 py-8 overflow-x-auto">
+          <main className="w-full flex-1 flex flex-row relative">
             {children}
           </main>
           {/* Footer */}
-          <div className="w-full max-w-6xl rounded-b-[14px] border-x border-b border-[#23263a] bg-[#23263a]/60 shadow-lg flex flex-col relative overflow-hidden">
+          <div className="w-full rounded-b-[14px] border-x border-b border-[#23263a] bg-[#23263a]/60 shadow-lg flex flex-col relative overflow-hidden">
             <div className="border-t border-[#23263a] px-4 sm:px-8 py-3">
               <Footer />
             </div>

@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import i18n from "@/lib/i18n";
+import { useRouter, usePathname } from "next/navigation";
+import i18n from "../lib/i18n";
 import { useTranslation } from "react-i18next";
 
 const tabs = [
@@ -19,12 +20,31 @@ const languages = [
 
 export default function Navbar() {
   const { t } = useTranslation("common");
+  const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useState(i18n.language || "pt");
+
+  // Mapeie as abas para as rotas reais
+  const tabRoutes = {
+    hello: "/",
+    about: "/about",
+    projects: "/projects",
+    contact: "/contact",
+  };
+
+  // Derive a aba ativa da rota atual
+  const activeTab = Object.keys(tabRoutes).find(
+    (key) => tabRoutes[key as keyof typeof tabRoutes] === pathname
+  ) || "hello";
 
   const handleChangeLanguage = (code: string) => {
     i18n.changeLanguage(code);
     setLang(code);
+  };
+
+  const handleTabClick = (key: string) => {
+    router.push(tabRoutes[key as keyof typeof tabRoutes]);
   };
 
   return (
@@ -33,14 +53,15 @@ export default function Navbar() {
       <nav className="hidden sm:flex items-center justify-between w-full font-mono text-[15px]">
         <span className="text-[#b3b9c5] font-normal tracking-wide select-none">lucianobragaweb</span>
         <div className="flex-1 flex justify-center gap-2">
-          {tabs.map((tab, idx) => (
+          {tabs.map((tab) => (
             <span
               key={tab.key}
-              className={`px-4 py-1 cursor-pointer relative transition text-[#b3b9c5] ${idx === 0 ? "text-white font-semibold" : "hover:text-white"}`}
+              className={`px-4 py-1 cursor-pointer relative transition text-[#b3b9c5] ${activeTab === tab.key ? "text-white font-semibold" : "hover:text-white"}`}
               style={{ fontVariant: "tabular-nums" }}
+              onClick={() => handleTabClick(tab.key)}
             >
               {t(`navbar.${tab.key}`)}
-              {idx === 0 && (
+              {activeTab === tab.key && (
                 <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-8 bg-[#ffb454] rounded-t-full" />
               )}
             </span>
@@ -106,8 +127,9 @@ export default function Navbar() {
               {tabs.map((tab) => (
                 <span
                   key={tab.key}
-                  className={`py-3 px-2 cursor-pointer font-mono text-[17px] text-[#b3b9c5] hover:text-white`}
+                  className={`py-3 px-2 cursor-pointer font-mono text-[17px] ${activeTab === tab.key ? "text-white font-semibold" : "text-[#b3b9c5] hover:text-white"}`}
                   style={{ fontVariant: "tabular-nums" }}
+                  onClick={() => { handleTabClick(tab.key); setOpen(false); }}
                 >
                   {t(`navbar.${tab.key}`)}
                 </span>

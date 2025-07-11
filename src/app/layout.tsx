@@ -2,8 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +36,7 @@ export default function RootLayout({
             </div>
           </div>
           {/* Conteúdo principal */}
-          <main className="w-full flex-1 flex flex-row relative">
+          <main className="w-full flex-1 flex flex-row relative overflow-y-auto">
             {children}
           </main>
           {/* Footer */}

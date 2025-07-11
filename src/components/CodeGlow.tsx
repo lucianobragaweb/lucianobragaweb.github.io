@@ -11,7 +11,7 @@ const code = `function initializeModelChunk<T>(chunk: ResolvedModelChunk<T>) {
 
 const gradient = "radial-gradient(circle at 60% 40%, #4fc3f7 0%, #7c3aed 40%, #22d3ee 70%, #23263a 100%)";
 
-export default function HomeCodeGlow() {
+export default function CodeGlow() {
   return (
     <div className="flex flex-col gap-6">
       {[0, 1, 2].map((i) => (

@@ -17,7 +17,7 @@ const languages = [
   { code: "pt", label: "PT" },
 ];
 
-export default function HomeNavbar() {
+export default function Navbar() {
   const { t } = useTranslation("common");
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useState(i18n.language || "pt");

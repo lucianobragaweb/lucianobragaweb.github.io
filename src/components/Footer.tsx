@@ -4,7 +4,7 @@ import React from "react";
 import { Linkedin, X, Github } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-export default function HomeFooter() {
+export default function Footer() {
   const { t } = useTranslation("common");
   return (
     <footer className="flex flex-col sm:flex-row items-center justify-between w-full font-mono text-[15px] gap-2 sm:gap-0">

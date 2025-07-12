@@ -8,17 +8,15 @@ import {
   CircleDot,
   Codesandbox,
   AppWindow,
-  Github,
-  Linkedin,
 } from "lucide-react";
 
 const filters = [
   { label: "React", icon: <Atom className="text-[#61dafb] w-5 h-5" /> },
+  { label: "Next.js", icon: <Atom className="text-[#61dafb] w-5 h-5" /> },
+  { label: "Laravel", icon: <Atom className="text-[#61dafb] w-5 h-5" /> },
   { label: "HTML", icon: <FileCode2 className="text-[#e44d26] w-5 h-5" /> },
   { label: "CSS", icon: <Palette className="text-[#1572b6] w-5 h-5" /> },
   { label: "Vue", icon: <BadgeCheck className="text-[#42b883] w-5 h-5" /> },
-  { label: "Angular", icon: <CircleDot className="text-[#dd0031] w-5 h-5" /> },
-  { label: "Gatsby", icon: <Codesandbox className="text-[#663399] w-5 h-5" /> },
   { label: "Flutter", icon: <AppWindow className="text-[#02569b] w-5 h-5" /> },
 ];
 

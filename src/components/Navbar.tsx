@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 import i18n from "../lib/i18n";
 import { useTranslation } from "react-i18next";
+import Link from 'next/link'
 
 const tabs = [
   { key: "hello" },
@@ -51,7 +52,9 @@ export default function Navbar() {
     <>
       {/* Desktop Navbar */}
       <nav className="hidden sm:flex items-center justify-between w-full font-mono text-[15px]">
-        <span className="text-[#b3b9c5] font-normal tracking-wide select-none">lucianobragaweb</span>
+        <Link href="/">
+          <span className="text-[#b3b9c5] font-normal tracking-wide select-none">@lucianobragaweb</span>
+        </Link>
         <div className="flex-1 flex justify-center gap-2">
           {tabs.map((tab) => (
             <span

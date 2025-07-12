@@ -21,13 +21,7 @@ export default function Footer() {
         </button>
       </div>
       <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
-        <span className="text-[#b3b9c5]">@</span>
-        <input
-          type="text"
-          placeholder={t("footer.username_placeholder")}
-          className="bg-transparent border-none outline-none text-[#b3b9c5] placeholder-[#6c7680] font-mono text-[15px] w-28 text-right"
-          style={{ letterSpacing: "0.05em" }}
-        />
+        <span className="text-[#b3b9c5]">@{t("footer.username_placeholder")}</span>
       </div>
     </footer>
   );

@@ -28,21 +28,24 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="h-screen w-full bg-[#181B23] flex flex-col items-center justify-between py-6 px-4">
-          {/* Navbar */}
-          <div className="w-full rounded-t-[14px] border-x border-t border-[#23263a] bg-[#23263a]/60 shadow-lg flex flex-col overflow-hidden">
-            <div className="border-b border-[#23263a] px-4 sm:px-8 pt-4 pb-2">
-              <Navbar />
+        <div className="h-screen overflow-hidden w-full bg-[#181B23] flex flex-col items-center justify-between py-6 px-4">
+          <div className="w-full h-full rounded-[14px] overflow-hidden relative flex flex-col">
+            <div className="h-full w-full absolute opacity-50 bg-glow rounded-t" style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}></div>
+            {/* Navbar */}
+            <div className="w-full rounded-t-[14px] border-x border-t border-[#23263a] bg-[#23263a]/60 shadow-lg flex flex-col overflow-hidden z-10">
+              <div className="border-b border-[#23263a] px-4 sm:px-8 pt-4 pb-2">
+                <Navbar />
+              </div>
             </div>
-          </div>
-          {/* Conteúdo principal */}
-          <main className="w-full flex-1 flex flex-row relative overflow-y-auto">
-            {children}
-          </main>
-          {/* Footer */}
-          <div className="w-full rounded-b-[14px] border-x border-b border-[#23263a] bg-[#23263a]/60 shadow-lg flex flex-col relative overflow-hidden">
-            <div className="border-t border-[#23263a] px-4 sm:px-8 py-3">
-              <Footer />
+            {/* Conteúdo principal */}
+            <main className="w-full h-full flex-1 flex flex-row overflow-y-auto z-10">
+              {children}
+            </main>
+            {/* Footer */}
+            <div className="w-full rounded-b-[14px] border-x border-b border-[#23263a] bg-[#23263a]/60 shadow-lg flex flex-col relative overflow-hidden">
+              <div className="border-t border-[#23263a] px-4 sm:px-8 py-3">
+                <Footer />
+              </div>
             </div>
           </div>
         </div>

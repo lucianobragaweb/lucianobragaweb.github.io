@@ -1,65 +1,76 @@
 "use client";
 import React, { useState } from "react";
 import {
-  Atom,
-  FileCode2,
-  Palette,
-  BadgeCheck,
-  CircleDot,
-  Codesandbox,
-  AppWindow,
-} from "lucide-react";
+  SiReact,
+  SiNextdotjs,
+  SiLaravel,
+  SiHtml5,
+  SiCss,
+  SiVuedotjs,
+  SiFlutter,
+} from "@icons-pack/react-simple-icons";
+import ProjectCard from "../../components/ProjectCard";
 
 const filters = [
-  { label: "React", icon: <Atom className="text-[#61dafb] w-5 h-5" /> },
-  { label: "Next.js", icon: <Atom className="text-[#61dafb] w-5 h-5" /> },
-  { label: "Laravel", icon: <Atom className="text-[#61dafb] w-5 h-5" /> },
-  { label: "HTML", icon: <FileCode2 className="text-[#e44d26] w-5 h-5" /> },
-  { label: "CSS", icon: <Palette className="text-[#1572b6] w-5 h-5" /> },
-  { label: "Vue", icon: <BadgeCheck className="text-[#42b883] w-5 h-5" /> },
-  { label: "Flutter", icon: <AppWindow className="text-[#02569b] w-5 h-5" /> },
+  { label: "React", icon: <SiReact className="text-[#61dafb] w-5 h-5" /> },
+  { label: "Next.js", icon: <SiNextdotjs className="text-[#61dafb] w-5 h-5" /> },
+  { label: "Laravel", icon: <SiLaravel className="text-[#ff2d20] w-5 h-5" /> },
+  { label: "HTML", icon: <SiHtml5 className="text-[#e44d26] w-5 h-5" /> },
+  { label: "CSS", icon: <SiCss className="text-[#1572b6] w-5 h-5" /> },
+  { label: "Vue", icon: <SiVuedotjs className="text-[#42b883] w-5 h-5" /> },
+  { label: "Flutter", icon: <SiFlutter className="text-[#02569b] w-5 h-5" /> },
 ];
 
 const projects = [
   {
-    title: "Project 1",
+    title: "E-commerce Platform",
     tag: "_ui-animations",
     image: "/mock1.jpg",
-    desc: "Duis aute irure dolor in velit esse cillum dolore.",
-    icon: <Atom className="text-[#61dafb] w-6 h-6" />,
-    techs: ["React", "CSS"],
+    desc: "Plataforma completa de e-commerce com animações fluidas e interface moderna.",
+    icon: <SiReact className="text-[#61dafb] w-6 h-6" />,
+    techs: ["React", "Next.js", "Tailwind CSS", "Stripe", "MongoDB"],
+    year: 2024,
+    imageId: 1,
   },
   {
-    title: "Project 2",
+    title: "Task Management App",
     tag: "_tetris-game",
     image: "/mock2.jpg",
-    desc: "Duis aute irure dolor in velit esse cillum dolore.",
-    icon: <Atom className="text-[#61dafb] w-6 h-6" />,
-    techs: ["React", "CSS"],
+    desc: "Aplicativo de gerenciamento de tarefas com drag & drop e notificações em tempo real.",
+    icon: <SiReact className="text-[#61dafb] w-6 h-6" />,
+    techs: ["React", "TypeScript", "Firebase", "Framer Motion"],
+    year: 2023,
+    imageId: 2,
   },
   {
-    title: "Project 3",
+    title: "Portfolio Website",
     tag: "_glassy-ui",
     image: "/mock3.jpg",
-    desc: "Duis aute irure dolor in velit esse cillum dolore.",
-    icon: <Palette className="text-[#1572b6] w-6 h-6" />,
-    techs: ["CSS"],
+    desc: "Website pessoal com design glassmorphism e animações interativas.",
+    icon: <SiCss className="text-[#1572b6] w-6 h-6" />,
+    techs: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    year: 2023,
+    imageId: 3,
   },
   {
-    title: "Project 4",
+    title: "Dashboard Analytics",
     tag: "_nimbus",
     image: "/mock4.jpg",
-    desc: "Duis aute irure dolor in velit esse cillum dolore.",
-    icon: <BadgeCheck className="text-[#42b883] w-6 h-6" />,
-    techs: ["Vue"],
+    desc: "Dashboard de analytics com gráficos interativos e filtros avançados.",
+    icon: <SiVuedotjs className="text-[#42b883] w-6 h-6" />,
+    techs: ["Vue.js", "Chart.js", "Laravel", "MySQL"],
+    year: 2022,
+    imageId: 4,
   },
   {
-    title: "Project 5",
+    title: "Mobile App",
     tag: "_emberize-ui",
     image: "/mock5.jpg",
-    desc: "Duis aute irure dolor in velit esse cillum dolore.",
-    icon: <BadgeCheck className="text-[#42b883] w-6 h-6" />,
-    techs: ["Vue", "CSS"],
+    desc: "Aplicativo mobile multiplataforma com funcionalidades offline.",
+    icon: <SiFlutter className="text-[#02569b] w-6 h-6" />,
+    techs: ["Flutter", "Dart", "Firebase", "GetX"],
+    year: 2024,
+    imageId: 5,
   },
 ];
 
@@ -86,7 +97,7 @@ export default function ProjectsPage() {
           <span className="font-semibold text-white">projects</span>
         </div>
         <div className="flex flex-col gap-2 mb-6">
-          {filters.map((f, i) => (
+          {filters.map((f) => (
             <label key={f.label} className="flex items-center gap-2 cursor-pointer text-[#b3b9c5] hover:text-white">
               <input
                 type="checkbox"
@@ -111,20 +122,16 @@ export default function ProjectsPage() {
         {/* Grid de projetos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((p, i) => (
-            <div key={i} className="bg-[#181b2b] rounded-xl overflow-hidden border border-[#23263a] flex flex-col shadow-md">
-              <div className="relative h-44 w-full bg-[#23263a] flex items-center justify-center">
-                {/* Imagem mock */}
-                <div className="w-full h-full bg-gradient-to-br from-[#23263a] to-[#23263a]/60 flex items-center justify-center">
-                  <span className="text-2xl text-[#b3b9c5]">img</span>
-                </div>
-                <div className="absolute top-3 right-3">{p.icon}</div>
-              </div>
-              <div className="p-5 flex-1 flex flex-col">
-                <span className="text-[#7c3aed] font-bold text-sm mb-1">{p.title} <span className="text-[#b3b9c5] font-normal">// {p.tag}</span></span>
-                <p className="text-[#b3b9c5] text-base mb-4 mt-2 flex-1">{p.desc}</p>
-                <button className="bg-[#23263a] text-[#b3b9c5] border border-[#23263a] rounded px-4 py-2 text-xs font-semibold hover:bg-[#23263a]/80 transition self-start">view-project</button>
-              </div>
-            </div>
+            <ProjectCard
+              key={i}
+              title={p.title}
+              tag={p.tag}
+              desc={p.desc}
+              icon={p.icon}
+              techs={p.techs}
+              year={p.year}
+              imageId={p.imageId}
+            />
           ))}
         </div>
       </main>

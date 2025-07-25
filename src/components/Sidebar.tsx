@@ -6,31 +6,31 @@ const nav = [
   {
     label: "personal-info",
     icon: <Folder size={16} className="inline mr-1 text-[#b3b9c5]" />,
-    openIcon: <FolderOpen size={16} className="inline mr-1 text-[#b3b9c5]" />,
-    children: [
-      { label: "bio", icon: <FileText size={14} className="inline mr-1 text-[#f87171]" />, color: "#f87171" },
-      { label: "interests", icon: <FileText size={14} className="inline mr-1 text-[#34d399]" />, color: "#34d399" },
-      {
-        label: "education",
-        icon: <Folder size={14} className="inline mr-1 text-[#60a5fa]" />,
-        openIcon: <FolderOpen size={14} className="inline mr-1 text-[#60a5fa]" />,
-        color: "#60a5fa",
-        children: [
-          { label: "high-school", icon: <FileText size={13} className="inline mr-1 text-[rgb(129,140,248)]" />, color: "#818cf8" },
-          { label: "university", icon: <FileText size={13} className="inline mr-1 text-[#a78bfa]" />, color: "#a78bfa" },
-        ],
-      },
-    ],
+    // openIcon: <FolderOpen size={16} className="inline mr-1 text-[#b3b9c5]" />,
+    // children: [
+    //   { label: "bio", icon: <FileText size={14} className="inline mr-1 text-[#f87171]" />, color: "#f87171" },
+    //   { label: "interests", icon: <FileText size={14} className="inline mr-1 text-[#34d399]" />, color: "#34d399" },
+    //   {
+    //     label: "education",
+    //     icon: <Folder size={14} className="inline mr-1 text-[#60a5fa]" />,
+    //     openIcon: <FolderOpen size={14} className="inline mr-1 text-[#60a5fa]" />,
+    //     color: "#60a5fa",
+    //     children: [
+    //       { label: "high-school", icon: <FileText size={13} className="inline mr-1 text-[rgb(129,140,248)]" />, color: "#818cf8" },
+    //       { label: "university", icon: <FileText size={13} className="inline mr-1 text-[#a78bfa]" />, color: "#a78bfa" },
+    //     ],
+    //   },
+    // ],
   },
-  {
-    label: "contacts",
-    icon: <Folder size={16} className="inline mr-1 text-[#b3b9c5]" />,
-    openIcon: <FolderOpen size={16} className="inline mr-1 text-[#b3b9c5]" />,
-    children: [
-      { label: "user@gmail.com", icon: <Mail size={14} className="inline mr-1 text-[#b3b9c5]" />, color: "#b3b9c5" },
-      { label: "+3598246359", icon: <Phone size={14} className="inline mr-1 text-[#b3b9c5]" />, color: "#b3b9c5" },
-    ],
-  },
+  // {
+  //   // label: "contacts",
+  //   // icon: <Folder size={16} className="inline mr-1 text-[#b3b9c5]" />,
+  //   // openIcon: <FolderOpen size={16} className="inline mr-1 text-[#b3b9c5]" />,
+  //   // children: [
+  //   //   { label: "lucianobragaweb@gmail.com", icon: <Mail size={14} className="inline mr-1 text-[#b3b9c5]" />, color: "#b3b9c5" },
+  //   //   { label: "+55 88 98154 6121", icon: <Phone size={14} className="inline mr-1 text-[#b3b9c5]" />, color: "#b3b9c5" },
+  //   // ],
+  // },
 ];
 
 function Tree({ items, level = 0 }: { items: any[]; level?: number }) {

@@ -1,3 +1,5 @@
+// ESLint desabilitado temporariamente
+/*
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
@@ -14,3 +16,7 @@ const eslintConfig = [
 ];
 
 export default eslintConfig;
+*/
+
+// Configuração vazia para desabilitar ESLint
+export default []

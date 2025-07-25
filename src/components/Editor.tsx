@@ -2,11 +2,20 @@ import React from "react";
 
 const tabs = [
   { label: "personal-info", active: true },
-  { label: "education", active: false },
+  // { label: "education", active: false },
   { label: "x", active: false },
 ];
 
-const code = `/**\n * About me\n * I have 5 years of experience in web\n * development lorem ipsum dolor sit amet,\n * consectetur adipiscing elit, sed do eiusmod\n * tempor incididunt ut labore et dolore\n * magna aliqua. Ut enim ad minim veniam,\n * quis nostrud exercitation ullamco laboris\n * nisi ut aliquip ex ea commodo consequat.\n * Duis aute irure dolor in reprehenderit in\n * voluptate velit esse cillum dolore eu fugiat\n * nulla pariatur. Excepteur sint occaecat\n * officia deserunt mollit anim id est laborum.\n */`;
+
+
+const code = `/**\n\
+ * About me\n\
+ *
+ * Working in web development since 2017, with experience building\n\
+ * solutions for a wide range of projects using modern technologies.\n\
+ * Passionate about creating efficient, user-centered applications and\n\
+ * continuously improving my skills through real-world challenges.\n\
+ */`;
 
 export default function Editor() {
   return (

@@ -1,18 +1,19 @@
 "use client";
 import React, { useState } from "react";
-import { Mail, Phone, Youtube, ChevronRight, ChevronDown, ExternalLink } from "lucide-react";
+import { Mail, Phone, ChevronRight, ChevronDown, ExternalLink } from "lucide-react";
 import ResizableColumn from "@/components/ResizableColumn";
 import { Highlight } from "prism-react-renderer";
 
 const contacts = [
-  { label: "user@gmail.com", icon: <Mail size={16} className="inline mr-1 text-[#b3b9c5]" /> },
-  { label: "+3598246359", icon: <Phone size={16} className="inline mr-1 text-[#b3b9c5]" /> },
+  { label: "lucianobragaweb@gmail.com", icon: <Mail size={16} className="inline mr-1 text-[#b3b9c5]" /> },
+  { label: "+55 88 98154 6121", icon: <Phone size={16} className="inline mr-1 text-[#b3b9c5]" /> },
 ];
 const socials = [
-  { label: "YouTube", icon: <Youtube size={16} className="inline mr-1 text-[#fff]" />, link: "#" },
-  { label: "dev.to", icon: <ExternalLink size={16} className="inline mr-1 text-[#b3b9c5]" />, link: "#" },
-  { label: "Instagram", icon: <ExternalLink size={16} className="inline mr-1 text-[#b3b9c5]" />, link: "#" },
-  { label: "Twich", icon: <ExternalLink size={16} className="inline mr-1 text-[#b3b9c5]" />, link: "#" },
+  // { label: "YouTube", icon: <Youtube size={16} className="inline mr-1 text-[#fff]" />, link: "#" },
+  { label: "dev.to", icon: <ExternalLink size={16} className="inline mr-1 text-[#b3b9c5]" />, link: "https://dev.to/lucianobragaweb" },
+  { label: "Instagram", icon: <ExternalLink size={16} className="inline mr-1 text-[#b3b9c5]" />, link: "https://www.instagram.com/lucianobragaweb" },
+  { label: "LinkedIn", icon: <ExternalLink size={16} className="inline mr-1 text-[#b3b9c5]" />, link: "https://www.linkedin.com/in/lucianobragaweb" },
+  { label: "GitHub", icon: <ExternalLink size={16} className="inline mr-1 text-[#b3b9c5]" />, link: "https://github.com/lucianobragaweb" },
 ];
 
 export default function ContactPage() {
@@ -81,7 +82,7 @@ export default function ContactPage() {
   return (
     <div className="w-full h-full min-h-[80vh] flex flex-row font-mono bg-[#101426] text-[#b3b9c5]">
       {/* Sidebar */}
-      <aside className="w-64 border-r border-[#23263a] bg-[#181b2b] flex flex-col py-6 px-4 select-none">
+      <aside className="w-96 border-r border-[#23263a] bg-[#181b2b] flex flex-col py-6 px-4 select-none">
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-2 font-bold text-white text-base">
             <ChevronDown size={16} /> contacts

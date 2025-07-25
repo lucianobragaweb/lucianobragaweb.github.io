@@ -10,7 +10,7 @@ import Link from 'next/link'
 const tabs = [
   { key: "hello" },
   { key: "about" },
-  { key: "projects" },
+  // { key: "projects" },
   { key: "contact" },
 ];
 
@@ -30,7 +30,7 @@ export default function Navbar() {
   const tabRoutes = {
     hello: "/",
     about: "/about",
-    projects: "/projects",
+    // projects: "/projects",
     contact: "/contact",
   };
 
@@ -75,7 +75,7 @@ export default function Navbar() {
           {languages.map((l, idx) => (
             <button
               key={l.code}
-              className={`px-2 py-1 font-mono text-xs rounded transition-colors ${lang === l.code ? "text-[#4fc3f7] underline underline-offset-4" : "text-[#b3b9c5] hover:text-white"}`}
+              className={`px-2 py-1 font-mono cursor-pointer text-xs rounded transition-colors ${lang === l.code ? "text-[#4fc3f7] underline-offset-4" : "text-[#b3b9c5] hover:text-white"}`}
               onClick={() => handleChangeLanguage(l.code)}
               aria-label={`Trocar para ${l.label}`}
             >
@@ -94,7 +94,7 @@ export default function Navbar() {
           {languages.map((l, idx) => (
             <button
               key={l.code}
-              className={`px-2 py-1 font-mono text-xs rounded transition-colors ${lang === l.code ? "text-[#4fc3f7] underline underline-offset-4" : "text-[#b3b9c5] hover:text-white"}`}
+              className={`px-2 py-1 font-mono cursor-pointer text-xs rounded transition-colors ${lang === l.code ? "text-[#4fc3f7] underline-offset-4" : "text-[#b3b9c5] hover:text-white"}`}
               onClick={() => handleChangeLanguage(l.code)}
               aria-label={`Trocar para ${l.label}`}
             >

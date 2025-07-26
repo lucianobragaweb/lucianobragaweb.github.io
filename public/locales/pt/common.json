@@ -1,9 +1,10 @@
 {
     "navbar": {
-        "hello": "_hello",
-        "about": "_about-me",
-        "projects": "_projects",
-        "contact": "_contact-me",
+        "hello": "_inicio",
+        "about": "_sobre-mim",
+        "projects": "_projetos",
+        "contact": "_contato",
+        "resume": "_curriculum",
         "navigate": "# navegue:",
         "lang_en": "EN",
         "lang_pt": "PT"

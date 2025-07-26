@@ -12,6 +12,7 @@ const tabs = [
   { key: "about" },
   // { key: "projects" },
   { key: "contact" },
+  { key: "resume" },
 ];
 
 const languages = [
@@ -32,6 +33,7 @@ export default function Navbar() {
     about: "/about",
     // projects: "/projects",
     contact: "/contact",
+    resume: "/resume",
   };
 
   // Derive a aba ativa da rota atual

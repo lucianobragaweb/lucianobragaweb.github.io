@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   // Configurações adicionais aqui
+  experimental: {
+    // Garantir que os assets sejam servidos corretamente
+    optimizePackageImports: ['lucide-react'],
+  },
 }
 
 export default nextConfig

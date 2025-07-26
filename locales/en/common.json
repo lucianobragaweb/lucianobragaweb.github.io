@@ -1,0 +1,25 @@
+{
+    "navbar": {
+        "hello": "_hello",
+        "about": "_about-me",
+        "projects": "_projects",
+        "contact": "_contact-me",
+        "resume": "_resume",
+        "navigate": "# navigate:",
+        "lang_en": "EN",
+        "lang_pt": "PT"
+    },
+    "greeting": "Hi all. I am",
+    "name": "Luciano Braga",
+    "role": "> Senior Full Stack Developer",
+    "code": {
+        "comment2": "// find my profile on Github:",
+        "const": "const",
+        "githubLink": "githubUrl",
+        "url": "https://github.com/lucianobragaweb"
+    },
+    "footer": {
+        "find_me": "find me in:",
+        "username_placeholder": "lucianobragaweb"
+    }
+}

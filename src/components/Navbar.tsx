@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 import i18n from "../lib/i18n";
@@ -35,9 +35,32 @@ export default function Navbar() {
   };
 
   // Derive a aba ativa da rota atual
-  const activeTab = Object.keys(tabRoutes).find(
-    (key) => tabRoutes[key as keyof typeof tabRoutes] === pathname
-  ) || "hello";
+  const getActiveTab = () => {
+    // Normalize o pathname removendo trailing slash
+    const normalizedPathname = pathname.replace(/\/$/, '');
+
+    // Para a rota raiz, retorne "hello"
+    if (normalizedPathname === "" || normalizedPathname === "/") return "hello";
+
+    // Para outras rotas, encontre a correspondência
+    const activeKey = Object.keys(tabRoutes).find(
+      (key) => {
+        const route = tabRoutes[key as keyof typeof tabRoutes];
+        const normalizedRoute = route.replace(/\/$/, '');
+        return normalizedRoute === normalizedPathname;
+      }
+    );
+
+    return activeKey || "hello";
+  };
+
+  const activeTab = getActiveTab();
+
+  // Debug: log para verificar os valores
+  useEffect(() => {
+    console.log("Pathname:", pathname);
+    console.log("Active tab:", activeTab);
+  }, [pathname, activeTab]);
 
   const handleChangeLanguage = (code: string) => {
     i18n.changeLanguage(code);
@@ -65,7 +88,15 @@ export default function Navbar() {
             >
               {t(`navbar.${tab.key}`)}
               {activeTab === tab.key && (
-                <span className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-8 bg-[#ffb454] rounded-t-full" />
+                <span
+                  className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] w-8 bg-[#ffb454] rounded-t-full"
+                  style={{
+                    backgroundColor: '#ffb454',
+                    height: '2px',
+                    width: '32px',
+                    borderRadius: '2px 2px 0 0'
+                  }}
+                />
               )}
             </span>
           ))}

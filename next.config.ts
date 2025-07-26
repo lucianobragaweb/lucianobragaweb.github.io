@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
   },
   // Configuração para GitHub Pages
   output: 'export',
-  basePath: '/lucianobragaweb.github.io',
-  assetPrefix: '/lucianobragaweb.github.io/',
+  basePath: process.env.NODE_ENV === 'production' ? '/lucianobragaweb.github.io' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/lucianobragaweb.github.io/' : '',
   trailingSlash: true,
   images: {
     unoptimized: true,

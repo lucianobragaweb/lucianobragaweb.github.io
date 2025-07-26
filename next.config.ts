@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Configuração para GitHub Pages
+  output: 'export',
+  basePath: '/lucianobragaweb.github.io',
+  assetPrefix: '/lucianobragaweb.github.io/',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
   // Configurações adicionais aqui
 }
 
